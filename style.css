@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("Comfortaa.woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.bg {
+    opacity: 0.2;
+    height: 413.64px;
+    width: 1433.636px;
+    z-index: 1;
+    position: absolute;
+    background-image: url(/glass.png);
+    margin-top: 20px;
+    border-radius: 10px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+.play {
+    animation-play-state: running;
+}
+
+.back {
+    animation-name: slidenback;
+    animation-play-state: running;
+}
+
+@keyframes slidein {
+    from {
+        top: 0;
+
+    }
+
+    to {
+        top: -415px;
+        animation-play-state: paused;
+    }
+
+    40% {
+        height: 496.368px;
+        width: 1720.3632px;
+        top: 200px;
+    }
+}
+
+@keyframes slidenback {
+    to {
+        top: 0;
+        animation-play-state: paused;
+    }
+
+    from {
+        top: -415px;
+
+    }
+
+    60% {
+        height: 496.368px;
+        width: 1720.3632px;
+        top: 200px;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #5a524d;
+}
+
+.keyboard {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 30px;
+}
+
+.input {
+    margin-top: 20px;
+}
+
+textarea::selection {
+    background: #4d5038;
+    color: #a7ae7c;
+}
+
+textarea {
+    font-family: "Comfortaa";
+    white-space: normal;
+    background: #a7ae7c;
+    color: #383b27;
+    width: 1400px;
+    height: 380px;
+    padding: 15px;
+    resize: none;
+    outline: none;
+    font-size: 4ch;
+    border-radius: 10px;
+    border: solid 2px black;
+    box-shadow: inset 0 15px 10px 0 rgba(0, 0, 0, 0.35), 0 5px 5px rgba(0, 0, 0, 0.5), 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+
+.row {
+    display: grid;
+    justify-content: center;
+    gap: 0px 10px;
+}
+
+.buttons {
+    display: grid;
+    justify-content: center;
+    width: 1318px;
+    height: 415px;
+    gap: 10px;
+    user-select: none;
+    padding: 10px 5px;
+    border-radius: 10px;
+    background: #b1b0b0;
+}
+
+.btn,
+.btnsp {
+    font-family: "Comfortaa";
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: 5;
+    padding: 0;
+    margin: 0;
+    width: 75px;
+    height: 75px;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #707070, #6e6e6e);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.30),
+        0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    border: none;
+    color: #ffffff;
+
+}
+
+.btn:active,
+.btnsp:active {
+    border: none;
+    background: rgb(255, 153, 0);
+    color: rgb(0, 0, 0);
+}
+
+.btn:active>span,
+.btnsp:active {
+    color: rgb(0, 0, 0);
+}
+
+.checked {
+    background: rgb(255, 153, 0);
+    color: rgb(0, 0, 0);
+}
+
+.visHidden {
+    visibility: hidden;
+}
+
+.visVisible {
+    visibility: visible;
+}
+
+.en,
+.alwaysen {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ru,
+.alwaysru,
+.num {
+    height: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.left,
+.right {
+    font-size: 2.5em;
+}
+
+.backspace {
+    width: 200px;
+}
+
+.slash,
+.tab {
+    width: 137px;
+}
+
+.caps {
+    width: 164px;
+}
+
+.enter {
+    width: 195px;
+}
+
+.shift {
+    width: 222px;
+}
+
+.ctrl {
+    width: 120px;
+}
+
+.space {
+    width: 566px;
+}
+
+.alt {
+    width: 101px;
+}
